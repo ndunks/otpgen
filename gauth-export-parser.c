@@ -1,8 +1,5 @@
 #include "gauth-export-parser.h"
-#include "base32.h"
-
 /*
-
 Google Authenticator Parser
 
 View value from exported GAuth QR Code content
@@ -87,7 +84,6 @@ int gauth_decode_otp_migration(const u_char *input, size_t size)
                     varint_read_len = varint_read_u(msg, &item.secret_len);
                     msg += varint_read_len;
                     memcpy(item.secret, msg, item.secret_len);
-                    base32_encode(item.secret, item.secret_len, encoded_secret);
                     printf("secret: ", item.secret_len);
                     for (i = 0; i < item.secret_len; i++)
                     {

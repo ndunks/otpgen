@@ -1,4 +1,6 @@
-
+/**
+* Sources: https://github.com/fmount/c_otp
+*/
 #ifndef RFC4226_H
 #define RFC4226_H
 
