@@ -22,6 +22,6 @@ int main(int argc, char const *argv[])
     time_t t = get_time(0);
     // 6 DIGITS
     result = TOTP(secret, sizeof(secret), t, 6);
-    printf("%u\n", result);
+    printf("%06u\n", result);
     return 0;
 }
